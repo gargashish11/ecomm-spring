@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header"/>
+<body>
+
+<nav th:replace="fragments/navbar"/>
+
+<div class="container-fluid">
+    <h2>Manage Users</h2>
+    <a th:href="@{/users/new}">Create User</a>
+
+    <table class="table table-responsive-lg table-bordered table-striped table-hover"
+           data-click-to-select="true"
+           data-pagination="true"
+           data-search="true"
+           data-search-align="right"
+           data-show-columns="true"
+           data-show-columns-toggle-all="true"
+           data-show-fullscreen="true"
+           data-show-pagination-switch="true"
+           data-show-refresh="true"
+           data-show-toggle="true"
+           data-toggle="table"
+           id="table">
+        <thead>
+        <tr>
+            <th data-sortable="true">User ID</th>
+            <th>Photo</th>
+            <th data-sortable="true">First Name</th>
+            <th data-sortable="true">Last Name</th>
+            <th data-sortable="true">Email</th>
+            <th data-sortable="true">Roles</th>
+            <th data-sortable="true">Enabled</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="user : ${listUsers}">
+            <td>[[${user.id}]]</td>
+            <td></td>
+            <td>[[${user.firstName}]]</td>
+            <td>[[${user.lastName}]]</td>
+            <td>[[${user.email}]]</td>
+            <td>[[${user.roles}]]</td>
+            <td>[[${user.isEnabled}]]</td>
+            <td>Edit Delete</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<footer th:replace="fragments/footer"/>
+</body>
+</html>

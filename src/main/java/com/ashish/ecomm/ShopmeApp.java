@@ -1,13 +1,13 @@
-package com.ashish.ecomm_spring;
+package com.ashish.ecomm;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class EcommSpringApplication {
+public class ShopmeApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(EcommSpringApplication.class, args);
+        SpringApplication.run(ShopmeApp.class, args);
     }
 
 }
