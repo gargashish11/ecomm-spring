@@ -7,13 +7,9 @@ import com.ashish.ecomm.common.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -42,18 +38,8 @@ public class UserController {
     }
 
     @PostMapping("/users/save")
-    public String saveUser(@Valid @ModelAttribute("user") User user,
-                             BindingResult bindingResult, Model model) {
-        System.out.println("******************Save hit***********************");
-        if (user.getFirstName().length()<4) {
-            bindingResult.addError(new FieldError(
-                    "user","firstName","sddsgdfg"));
-        }
+    public String saveUser(User user) {
         System.out.println(user);
-        if (bindingResult.hasErrors()) {
-            System.out.println("****************Binding hit**********************");
-            return "user_form";
-        }
         return "redirect:/users";
     }
 }

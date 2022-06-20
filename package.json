@@ -34,12 +34,18 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
     "mozjpeg": "^8.0.0",
-    "svgo": "^2.8.0"
+    "sass": "^1.52.3",
+    "svgo": "^2.8.0",
+    "webpack-stream": "^7.0.0"
   },
   "browserslist": [
     "last 2 versions",
     "not dead",
     "iOS 8",
     "> 5%"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap-table": "^1.20.2",
+    "jquery": "^3.6.0"
+  }
 }

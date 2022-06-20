@@ -1,5 +1,5 @@
 // Our modules / classes
-import Contact_Form from "./modules/CreateUser_Form"
+import CreateUser_Form from "./modules/CreateUser_Form"
 
 // Instantiate a new object using our modules/classes
 var contact_form = new CreateUser_Form()
@@ -8,3 +8,4 @@ var contact_form = new CreateUser_Form()
 if (module.hot) {
   module.hot.accept()
 }
+console.log("dsfasfdds");
