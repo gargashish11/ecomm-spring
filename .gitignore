@@ -58,4 +58,4 @@ build/
 ### VS Code ###
 .vscode/
 
-src/main/resources/static/*.hot-update.js*
+src/main/resources/static/main*hot-update.js*
