@@ -32,8 +32,8 @@ public class UserController {
     public String createUser(Model model) {
         User user = new User();
         List<Role> roleList = roleService.listRoles();
-        model.addAttribute("user",user);
-        model.addAttribute("roleList",roleList);
+        model.addAttribute("user", user);
+        model.addAttribute("roleList", roleList);
         return "user_form";
     }
 
