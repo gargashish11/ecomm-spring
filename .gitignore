@@ -59,4 +59,3 @@ build/
 .vscode/
 
 src/main/resources/static/main*hot-update.js*
-babel.config.js
